@@ -9,7 +9,6 @@ export default function Home() {
             <motion.div className="container"
             initial={{ opacity: 0, translateY: 100}}
             animate={{ opacity: 1, translateY: 0 }}>
-            >
                 {/* LARGE STORIES START */}
 
                 <div className="largeStories">
