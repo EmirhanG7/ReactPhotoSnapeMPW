@@ -1,6 +1,3 @@
-import { useState } from "react";
-import Footer from "../Components/Footer.jsx";
-import Header from "../Components/Header.jsx";
 import { Link } from "react-router-dom";
 
 export default function Features() {
