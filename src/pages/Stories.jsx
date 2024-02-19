@@ -1,11 +1,14 @@
-import Footer from "../Components/Footer.jsx";
-import Header from "../Components/Header.jsx";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
+import {motion} from "framer-motion";
+
 
 export default function Stories() {
     return (
         <>
-            <div className="storiesContainer">
+            <motion.div className="storiesContainer"
+            initial={{ opacity: 0, translateY: 100 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            >
                 <div className="largestImg">
                     <img src="/images/largest-img.png" alt="Largest Story" />
                     <div className="largesImgText">
@@ -245,7 +248,7 @@ export default function Stories() {
                         </div>
                     </Link>
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }

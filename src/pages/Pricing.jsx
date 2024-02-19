@@ -2,6 +2,7 @@ import { useState } from "react";
 import Footer from "../Components/Footer.jsx";
 import Header from "../Components/Header.jsx";
 import { Link } from "react-router-dom";
+import {motion} from "framer-motion";
 
 export default function Pricing() {
     const [input, setInput] = useState(0);
@@ -66,7 +67,10 @@ export default function Pricing() {
 
     return (
         <>
-            <div className="pricingContainer">
+            <motion.div className="pricingContainer"
+            initial={{ opacity: 0, translateY: 100}}
+            animate={{opacity: 1, translateY: 0}}
+            >
                 <div className="pricingHeader">
                     <div className="pricingText">
                         <h1>FİYATLANDIRMA</h1>
@@ -214,7 +218,7 @@ export default function Pricing() {
                     </div>
                 </div>
 
-            </div>
+            </motion.div>
         </>
     )
 }

@@ -1,11 +1,15 @@
 import Footer from "../Components/Footer.jsx";
 import Header from "../Components/Header.jsx";
 import { Link } from "react-router-dom";
+import {motion} from "framer-motion";
 
 export default function Home() {
     return (
         <>
-            <div className="container">
+            <motion.div className="container"
+            initial={{ opacity: 0, translateY: 100}}
+            animate={{ opacity: 1, translateY: 0 }}>
+            >
                 {/* LARGE STORIES START */}
 
                 <div className="largeStories">
@@ -121,7 +125,7 @@ export default function Home() {
                     </div>
                 </div>
                 {/* FEATURES END */}
-            </div>
+            </motion.div>
         </>
     )
 }
