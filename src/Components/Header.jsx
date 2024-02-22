@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
 
     function handleClick() {
-        document.querySelector('.hamburger-menu input[name="hamburger-menu"]').checked = false;
-        window.scrollTo(0, 0);
-    }
+        document.querySelector('.hamburger-menu input[name="hamburger-menu"]').checked = false;}
       
     return (
         <div className="header">
