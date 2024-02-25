@@ -2,6 +2,10 @@ import { Link } from "react-router-dom"
 
 export default function Footer() {
 
+    function handleClick() {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <div className="footerContainer">
             <div className="footerHeader">
@@ -39,7 +43,7 @@ export default function Footer() {
                     </svg>
                 </div>
                 <div className="footerNav">
-                <ul>
+                <ul onClick={handleClick}>
                     <li><Link to={'/'}>ANASAYFA</Link></li>
                     <li><Link to={'/hikayeler'}>Hikayeler</Link></li>
                     <li><Link to={'/ozellikler'}>Özellikler</Link></li>
